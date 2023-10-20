@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Hot and Cold Game</title>
+</head>
+<body>
+    <div id="guess-container" class="container">
+        <h1>Hot and Cold Game</h1>
+        <div id="guess-info">
+            <p>Current Guess: <span id="current-guess">50</span></p>
+            <p>Guesses Remaining: <span id="guesses-remaining">5</span></p>
+        </div>
+        <div id="buttons">
+            <button onclick="updateGuess(-1)">-1</button>
+            <button onclick="updateGuess(-5)">-5</button>
+            <button onclick="updateGuess(-10)">-10</button>
+            <button onclick="updateGuess(-25)">-25</button>
+            <button onclick="updateGuess(1)">+1</button>
+            <button onclick="updateGuess(5)">+5</button>
+            <button onclick="updateGuess(10)">+10</button>
+            <button onclick="updateGuess(25)">+25</button>
+        </div>
+        <button id="commit-button" onclick="checkGuess()">Commit</button>
+        <button id="reset-button" onclick="resetGame()">Reset</button>
+        <div id="guess-log"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
